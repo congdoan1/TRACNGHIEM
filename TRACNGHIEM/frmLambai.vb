@@ -53,6 +53,9 @@
             dapanchon(i) = ""
         Next
 
+        dapandung = New Char(socauhoi) {}
+        taoBangDapAnDung()
+
         'hiển thị câu hỏi đầu tiên
         index = 0
         hienthicauhoi(index)
@@ -61,7 +64,17 @@
         txtTONGSOCAU.Text = socauhoi
     End Sub
 
+    Private Sub taoBangDapAnDung()
+        Dim dapan As Char
+        For i As Integer = 0 To socauhoi - 1
+            row = DS.SP_CHONCAUHOI.Rows(i)
+            dapan = row("DAPAN")
+            dapandung.SetValue(dapan, i)
+        Next
+    End Sub
+
     Private Sub btnCautieptheo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCautieptheo.Click
+        themCauTraLoi(index)
         If index = socauhoi - 1 Then
             index = 0
         Else
@@ -69,11 +82,11 @@
         End If
         txtCAUHIENTAI.Text = index + 1
         hienthicauhoi(index)
-        kiemtra(index)
 
     End Sub
 
     Private Sub btnCautruoc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCautruoc.Click
+        themCauTraLoi(index)
         If index = 0 Then
             index = socauhoi - 1
         Else
@@ -81,7 +94,6 @@
         End If
         txtCAUHIENTAI.Text = index + 1
         hienthicauhoi(index)
-        kiemtra(index)
 
     End Sub
 
@@ -92,7 +104,7 @@
         txtB.Text = row("B")
         txtC.Text = row("C")
         txtD.Text = row("D")
-        Dim caudung As Char = row("DAPAN")
+
         Dim caudachon As Char = dapanchon(index)
         Select Case caudachon
             Case "A"
@@ -103,12 +115,15 @@
                 rdC.Checked = True
             Case "D"
                 rdD.Checked = True
+            Case Else
+                rdA.Checked = False
+                rdB.Checked = False
+                rdC.Checked = False
+                rdD.Checked = False
         End Select
     End Sub
 
-    Private Sub kiemtra(ByVal index As Integer)
-        row = DS.SP_CHONCAUHOI.Rows(index)
-        Dim caudung As Char = row("DAPAN")
+    Private Sub themCauTraLoi(ByVal index As Integer)
         Dim dapan As Char
         Select Case True
             Case rdA.Checked
@@ -127,21 +142,26 @@
                 dapan = ""
         End Select
 
-        If dapan <> "" Then
-            dapanchon.SetValue(dapan, index)
-        End If
-
-        If dapan = caudung Then
-            socaudung += 1
-        End If
+        dapanchon.SetValue(dapan, index)
     End Sub
 
 
     Private Sub btnNopbai_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNopbai.Click
-        MsgBox("Điểm của bạn: " & socaudung * 10 / socauhoi, MsgBoxStyle.Information)
-        For i As Integer = 0 To socauhoi - 1
-            Console.WriteLine(dapanchon(i))
-        Next
-        'Application.Exit()
+        themCauTraLoi(index)
+        Dim dd As String = New String(dapanchon)
+        MsgBox(dd, MsgBoxStyle.Information)
+        Exit Sub
+        MsgBox("Điểm của bạn: " & tinhDiem(), MsgBoxStyle.Information)
+        Application.Exit()
     End Sub
+
+    Private Function tinhDiem() As Double
+        Dim socaudung As Integer = 0
+        For i As Integer = 0 To socauhoi - 1
+            If dapanchon(index) = dapandung(index) Then
+                socaudung += 1
+            End If
+        Next
+        tinhDiem = socaudung * 10 / socauhoi
+    End Function
 End Class

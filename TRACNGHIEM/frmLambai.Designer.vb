@@ -57,6 +57,16 @@ Partial Class frmLambai
         Me.SP_XEMDANGKYTableAdapter = New TRACNGHIEM.DSTableAdapters.SP_XEMDANGKYTableAdapter
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.pnlLAMBAI = New System.Windows.Forms.Panel
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox
+        Me.txtA = New System.Windows.Forms.Label
+        Me.rdD = New System.Windows.Forms.RadioButton
+        Me.rdB = New System.Windows.Forms.RadioButton
+        Me.txtB = New System.Windows.Forms.Label
+        Me.rdC = New System.Windows.Forms.RadioButton
+        Me.rdA = New System.Windows.Forms.RadioButton
+        Me.txtC = New System.Windows.Forms.Label
+        Me.txtD = New System.Windows.Forms.Label
+        Me.txtNOIDUNG = New System.Windows.Forms.Label
         Me.txtTONGSOCAU = New System.Windows.Forms.Label
         Me.Label7 = New System.Windows.Forms.Label
         Me.txtCAUHIENTAI = New System.Windows.Forms.Label
@@ -66,16 +76,6 @@ Partial Class frmLambai
         Me.btnCautruoc = New System.Windows.Forms.Button
         Me.SP_CHONCAUHOIBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SP_CHONCAUHOITableAdapter = New TRACNGHIEM.DSTableAdapters.SP_CHONCAUHOITableAdapter
-        Me.txtNOIDUNG = New System.Windows.Forms.Label
-        Me.txtA = New System.Windows.Forms.Label
-        Me.txtB = New System.Windows.Forms.Label
-        Me.txtC = New System.Windows.Forms.Label
-        Me.txtD = New System.Windows.Forms.Label
-        Me.rdA = New System.Windows.Forms.RadioButton
-        Me.rdC = New System.Windows.Forms.RadioButton
-        Me.rdB = New System.Windows.Forms.RadioButton
-        Me.rdD = New System.Windows.Forms.RadioButton
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox
         MAMHLabel = New System.Windows.Forms.Label
         Label1 = New System.Windows.Forms.Label
         TENMHLabel = New System.Windows.Forms.Label
@@ -97,8 +97,8 @@ Partial Class frmLambai
         CType(Me.SP_XEMDANGKYBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.pnlLAMBAI.SuspendLayout()
-        CType(Me.SP_CHONCAUHOIBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.SP_CHONCAUHOIBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MAMHLabel
@@ -172,6 +172,42 @@ Partial Class frmLambai
         NOIDUNGLabel.Size = New System.Drawing.Size(63, 16)
         NOIDUNGLabel.TabIndex = 0
         NOIDUNGLabel.Text = "Nội dung:"
+        '
+        'ALabel
+        '
+        ALabel.AutoSize = True
+        ALabel.Location = New System.Drawing.Point(38, 19)
+        ALabel.Name = "ALabel"
+        ALabel.Size = New System.Drawing.Size(21, 16)
+        ALabel.TabIndex = 17
+        ALabel.Text = "A."
+        '
+        'BLabel
+        '
+        BLabel.AutoSize = True
+        BLabel.Location = New System.Drawing.Point(435, 19)
+        BLabel.Name = "BLabel"
+        BLabel.Size = New System.Drawing.Size(20, 16)
+        BLabel.TabIndex = 18
+        BLabel.Text = "B."
+        '
+        'CLabel
+        '
+        CLabel.AutoSize = True
+        CLabel.Location = New System.Drawing.Point(38, 65)
+        CLabel.Name = "CLabel"
+        CLabel.Size = New System.Drawing.Size(21, 16)
+        CLabel.TabIndex = 19
+        CLabel.Text = "C."
+        '
+        'DLabel
+        '
+        DLabel.AutoSize = True
+        DLabel.Location = New System.Drawing.Point(437, 65)
+        DLabel.Name = "DLabel"
+        DLabel.Size = New System.Drawing.Size(22, 16)
+        DLabel.TabIndex = 20
+        DLabel.Text = "D."
         '
         'GroupBox1
         '
@@ -371,6 +407,107 @@ Partial Class frmLambai
         Me.pnlLAMBAI.Size = New System.Drawing.Size(925, 337)
         Me.pnlLAMBAI.TabIndex = 7
         '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.txtA)
+        Me.GroupBox4.Controls.Add(Me.rdD)
+        Me.GroupBox4.Controls.Add(ALabel)
+        Me.GroupBox4.Controls.Add(Me.rdB)
+        Me.GroupBox4.Controls.Add(Me.txtB)
+        Me.GroupBox4.Controls.Add(Me.rdC)
+        Me.GroupBox4.Controls.Add(BLabel)
+        Me.GroupBox4.Controls.Add(Me.rdA)
+        Me.GroupBox4.Controls.Add(Me.txtC)
+        Me.GroupBox4.Controls.Add(DLabel)
+        Me.GroupBox4.Controls.Add(CLabel)
+        Me.GroupBox4.Controls.Add(Me.txtD)
+        Me.GroupBox4.Location = New System.Drawing.Point(231, 143)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(674, 100)
+        Me.GroupBox4.TabIndex = 26
+        Me.GroupBox4.TabStop = False
+        '
+        'txtA
+        '
+        Me.txtA.Location = New System.Drawing.Point(64, 19)
+        Me.txtA.Name = "txtA"
+        Me.txtA.Size = New System.Drawing.Size(200, 23)
+        Me.txtA.TabIndex = 18
+        Me.txtA.Text = "Đáp án A"
+        '
+        'rdD
+        '
+        Me.rdD.AutoSize = True
+        Me.rdD.Location = New System.Drawing.Point(417, 66)
+        Me.rdD.Name = "rdD"
+        Me.rdD.Size = New System.Drawing.Size(14, 13)
+        Me.rdD.TabIndex = 25
+        Me.rdD.TabStop = True
+        Me.rdD.UseVisualStyleBackColor = True
+        '
+        'rdB
+        '
+        Me.rdB.AutoSize = True
+        Me.rdB.Location = New System.Drawing.Point(415, 20)
+        Me.rdB.Name = "rdB"
+        Me.rdB.Size = New System.Drawing.Size(14, 13)
+        Me.rdB.TabIndex = 24
+        Me.rdB.TabStop = True
+        Me.rdB.UseVisualStyleBackColor = True
+        '
+        'txtB
+        '
+        Me.txtB.Location = New System.Drawing.Point(457, 19)
+        Me.txtB.Name = "txtB"
+        Me.txtB.Size = New System.Drawing.Size(200, 23)
+        Me.txtB.TabIndex = 19
+        Me.txtB.Text = "Đáp án B"
+        '
+        'rdC
+        '
+        Me.rdC.AutoSize = True
+        Me.rdC.Location = New System.Drawing.Point(18, 66)
+        Me.rdC.Name = "rdC"
+        Me.rdC.Size = New System.Drawing.Size(14, 13)
+        Me.rdC.TabIndex = 23
+        Me.rdC.TabStop = True
+        Me.rdC.UseVisualStyleBackColor = True
+        '
+        'rdA
+        '
+        Me.rdA.AutoSize = True
+        Me.rdA.Location = New System.Drawing.Point(18, 20)
+        Me.rdA.Name = "rdA"
+        Me.rdA.Size = New System.Drawing.Size(14, 13)
+        Me.rdA.TabIndex = 22
+        Me.rdA.TabStop = True
+        Me.rdA.UseVisualStyleBackColor = True
+        '
+        'txtC
+        '
+        Me.txtC.Location = New System.Drawing.Point(64, 65)
+        Me.txtC.Name = "txtC"
+        Me.txtC.Size = New System.Drawing.Size(200, 23)
+        Me.txtC.TabIndex = 20
+        Me.txtC.Text = "Đáp án C"
+        '
+        'txtD
+        '
+        Me.txtD.Location = New System.Drawing.Point(457, 65)
+        Me.txtD.Name = "txtD"
+        Me.txtD.Size = New System.Drawing.Size(200, 23)
+        Me.txtD.TabIndex = 21
+        Me.txtD.Text = "Đáp án D"
+        '
+        'txtNOIDUNG
+        '
+        Me.txtNOIDUNG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNOIDUNG.Location = New System.Drawing.Point(231, 22)
+        Me.txtNOIDUNG.Name = "txtNOIDUNG"
+        Me.txtNOIDUNG.Size = New System.Drawing.Size(674, 107)
+        Me.txtNOIDUNG.TabIndex = 17
+        Me.txtNOIDUNG.Text = "Nội dung câu hỏi"
+        '
         'txtTONGSOCAU
         '
         Me.txtTONGSOCAU.AutoSize = True
@@ -443,143 +580,6 @@ Partial Class frmLambai
         '
         Me.SP_CHONCAUHOITableAdapter.ClearBeforeFill = True
         '
-        'txtNOIDUNG
-        '
-        Me.txtNOIDUNG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNOIDUNG.Location = New System.Drawing.Point(231, 22)
-        Me.txtNOIDUNG.Name = "txtNOIDUNG"
-        Me.txtNOIDUNG.Size = New System.Drawing.Size(674, 107)
-        Me.txtNOIDUNG.TabIndex = 17
-        Me.txtNOIDUNG.Text = "Nội dung câu hỏi"
-        '
-        'ALabel
-        '
-        ALabel.AutoSize = True
-        ALabel.Location = New System.Drawing.Point(38, 19)
-        ALabel.Name = "ALabel"
-        ALabel.Size = New System.Drawing.Size(21, 16)
-        ALabel.TabIndex = 17
-        ALabel.Text = "A."
-        '
-        'txtA
-        '
-        Me.txtA.Location = New System.Drawing.Point(64, 19)
-        Me.txtA.Name = "txtA"
-        Me.txtA.Size = New System.Drawing.Size(200, 23)
-        Me.txtA.TabIndex = 18
-        Me.txtA.Text = "Đáp án A"
-        '
-        'BLabel
-        '
-        BLabel.AutoSize = True
-        BLabel.Location = New System.Drawing.Point(435, 19)
-        BLabel.Name = "BLabel"
-        BLabel.Size = New System.Drawing.Size(20, 16)
-        BLabel.TabIndex = 18
-        BLabel.Text = "B."
-        '
-        'txtB
-        '
-        Me.txtB.Location = New System.Drawing.Point(457, 19)
-        Me.txtB.Name = "txtB"
-        Me.txtB.Size = New System.Drawing.Size(200, 23)
-        Me.txtB.TabIndex = 19
-        Me.txtB.Text = "Đáp án B"
-        '
-        'CLabel
-        '
-        CLabel.AutoSize = True
-        CLabel.Location = New System.Drawing.Point(38, 65)
-        CLabel.Name = "CLabel"
-        CLabel.Size = New System.Drawing.Size(21, 16)
-        CLabel.TabIndex = 19
-        CLabel.Text = "C."
-        '
-        'txtC
-        '
-        Me.txtC.Location = New System.Drawing.Point(64, 65)
-        Me.txtC.Name = "txtC"
-        Me.txtC.Size = New System.Drawing.Size(200, 23)
-        Me.txtC.TabIndex = 20
-        Me.txtC.Text = "Đáp án C"
-        '
-        'DLabel
-        '
-        DLabel.AutoSize = True
-        DLabel.Location = New System.Drawing.Point(437, 65)
-        DLabel.Name = "DLabel"
-        DLabel.Size = New System.Drawing.Size(22, 16)
-        DLabel.TabIndex = 20
-        DLabel.Text = "D."
-        '
-        'txtD
-        '
-        Me.txtD.Location = New System.Drawing.Point(457, 65)
-        Me.txtD.Name = "txtD"
-        Me.txtD.Size = New System.Drawing.Size(200, 23)
-        Me.txtD.TabIndex = 21
-        Me.txtD.Text = "Đáp án D"
-        '
-        'rdA
-        '
-        Me.rdA.AutoSize = True
-        Me.rdA.Location = New System.Drawing.Point(18, 20)
-        Me.rdA.Name = "rdA"
-        Me.rdA.Size = New System.Drawing.Size(14, 13)
-        Me.rdA.TabIndex = 22
-        Me.rdA.TabStop = True
-        Me.rdA.UseVisualStyleBackColor = True
-        '
-        'rdC
-        '
-        Me.rdC.AutoSize = True
-        Me.rdC.Location = New System.Drawing.Point(18, 66)
-        Me.rdC.Name = "rdC"
-        Me.rdC.Size = New System.Drawing.Size(14, 13)
-        Me.rdC.TabIndex = 23
-        Me.rdC.TabStop = True
-        Me.rdC.UseVisualStyleBackColor = True
-        '
-        'rdB
-        '
-        Me.rdB.AutoSize = True
-        Me.rdB.Location = New System.Drawing.Point(415, 20)
-        Me.rdB.Name = "rdB"
-        Me.rdB.Size = New System.Drawing.Size(14, 13)
-        Me.rdB.TabIndex = 24
-        Me.rdB.TabStop = True
-        Me.rdB.UseVisualStyleBackColor = True
-        '
-        'rdD
-        '
-        Me.rdD.AutoSize = True
-        Me.rdD.Location = New System.Drawing.Point(417, 66)
-        Me.rdD.Name = "rdD"
-        Me.rdD.Size = New System.Drawing.Size(14, 13)
-        Me.rdD.TabIndex = 25
-        Me.rdD.TabStop = True
-        Me.rdD.UseVisualStyleBackColor = True
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.Controls.Add(Me.txtA)
-        Me.GroupBox4.Controls.Add(Me.rdD)
-        Me.GroupBox4.Controls.Add(ALabel)
-        Me.GroupBox4.Controls.Add(Me.rdB)
-        Me.GroupBox4.Controls.Add(Me.txtB)
-        Me.GroupBox4.Controls.Add(Me.rdC)
-        Me.GroupBox4.Controls.Add(BLabel)
-        Me.GroupBox4.Controls.Add(Me.rdA)
-        Me.GroupBox4.Controls.Add(Me.txtC)
-        Me.GroupBox4.Controls.Add(DLabel)
-        Me.GroupBox4.Controls.Add(CLabel)
-        Me.GroupBox4.Controls.Add(Me.txtD)
-        Me.GroupBox4.Location = New System.Drawing.Point(231, 143)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(674, 100)
-        Me.GroupBox4.TabIndex = 26
-        Me.GroupBox4.TabStop = False
-        '
         'frmLambai
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -603,9 +603,9 @@ Partial Class frmLambai
         Me.Panel1.ResumeLayout(False)
         Me.pnlLAMBAI.ResumeLayout(False)
         Me.pnlLAMBAI.PerformLayout()
-        CType(Me.SP_CHONCAUHOIBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.SP_CHONCAUHOIBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
